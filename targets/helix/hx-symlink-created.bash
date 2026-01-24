@@ -1,6 +1,6 @@
 #!/usr/bin/env blarg
 
-depends_on helix-installed core/local-bin-dir-created
+depends_on installed core/local-bin-dir-created
 
 satisfied_if() {
   command -v hx

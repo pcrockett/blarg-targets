@@ -1,7 +1,7 @@
 #!/usr/bin/env blarg
 
 targets=(
-  archlinux/helix-installed  # TODO: add support for other distros
+  installed
   hx-symlink-created
   helix-configured
 )
