@@ -5,4 +5,4 @@ PACKAGES=(
   helix
 )
 
-snippet "packages-installed"
+snippet "archlinux-packages-installed"
