@@ -55,9 +55,9 @@ u = "@X<space>;c<C-u>"     # uncheck a checkbox
 n = "@gll<space>;c<C-n>A"  # new checkbox
 
 # "internal" keybindings (only used to enable the above):
-C-c = ":pipe sed -r 's|[\\*-] \\[ \\]|* [x]|'"
-C-u = ":pipe sed -r 's|[\\*-] \\[.\\]|* [ ]|'"
-C-n = ":pipe echo; echo '* [ ] '"
+C-c = ":pipe sed -r 's|[\\*-] \\[ \\]|- [x]|'"
+C-u = ":pipe sed -r 's|[\\*-] \\[.\\]|- [ ]|'"
+C-n = ":pipe echo; echo '- [ ] '"
 
 # tagref
 [keys.normal." ".";".t]
