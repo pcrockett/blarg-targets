@@ -8,7 +8,7 @@ reusable targets. To incorporate into your own blarg project:
 
 [module.pcrockett]
 location = https://github.com/pcrockett/blarg-targets.git
-ref = main
+ref = main  # <-- don't use main; see <https://github.com/pcrockett/blarg-targets/releases>
 ```
 
 Then in your own targets you can use, for example:
