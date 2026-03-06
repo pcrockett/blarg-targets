@@ -1,4 +1,15 @@
 #!/usr/bin/env blarg
 
-# TODO: make this a cross-platform target. add Debian / Ubuntu support first.
-depends_on archlinux/helix-installed
+satisfied_if() {
+  command -v hx
+}
+
+apply() {
+  if pacman:is_installed; then
+    satisfy archlinux/helix-installed
+  elif apt_get:is_installed; then
+    satisfy debian/helix-installed
+  else
+    panic "Only pacman or apt-get are supported right now."
+  fi
+}
