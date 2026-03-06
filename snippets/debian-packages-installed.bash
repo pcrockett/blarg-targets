@@ -4,9 +4,10 @@
 #
 
 satisfied_if() {
-  pacman:package_is_installed "${PACKAGES[@]}"
+  apt_get:package_is_installed "${PACKAGES[@]}"
 }
 
 apply() {
-  pacman:install "${PACKAGES[@]}"
+  satisfy debian/apt-updated
+  apt_get:install "${PACKAGES[@]}"
 }
