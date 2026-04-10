@@ -2,6 +2,7 @@
 
 targets=(
   started
+  added-to-docker-group
 )
 
 depends_on "${targets[@]}"
