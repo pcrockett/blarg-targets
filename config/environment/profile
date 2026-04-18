@@ -16,3 +16,5 @@ export RUSH_CONFIG="${HOME}/.config/rush/config"
 export RUSH_ROOT="${HOME}/.local/share/rush"
 export SQUIRREL_DEST="${HOME}/.local/share/squirrel"
 export VISUAL="/usr/bin/helix"
+
+test -f "${HOME}/.profile-override" && . "${HOME}/.profile-override"
