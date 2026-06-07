@@ -7,14 +7,16 @@ export DIFFPROG="/usr/bin/delta"
 export EDITOR="/usr/bin/helix"
 export FCEUX_HOME="${HOME}/.config/fceux"
 export GOPATH="${HOME}/.local/share/golang"
+export GOBIN="${GOPATH}/bin"
 export GRAMPS_DEFAULT_REPO="${HOME}/.local/share/gramps"
 export KAGI_OPEN_COMMAND=bgopen
-export PATH="${HOME}/.local/bin:${HOME}/.local/state/asdf/shims:${HOME}/.cargo/bin:${HOME}/.local/share/pnpm:${PATH}"
 export PIP_REQUIRE_VIRTUALENV="true"
 export PNPM_HOME="${HOME}/.local/share/pnpm"
 export RUSH_CONFIG="${HOME}/.config/rush/config"
 export RUSH_ROOT="${HOME}/.local/share/rush"
 export SQUIRREL_DEST="${HOME}/.local/share/squirrel"
 export VISUAL="/usr/bin/helix"
+
+export PATH="${HOME}/.local/bin:${ASDF_DATA_DIR}/shims:${HOME}/.cargo/bin:${PNPM_HOME}:${GOBIN}:${PATH}"
 
 test -f "${HOME}/.profile-override" && . "${HOME}/.profile-override"
