@@ -26,10 +26,14 @@ insert = "bar"
 cursor-line = "warning"
 
 # <https://docs.helix-editor.com/remapping.html>
+[keys.select]
+C-b = ":pipe hx-bold.sh"
+
 [keys.normal]
 "ret" = ["open_below"]
 # run `fzmake` in current directory in a pop-up alacritty window
 C-m = ":run-shell-command alacritty --class dialog --title fzmake --hold --option window.dimensions.columns=70 --option window.dimensions.lines=30 --command fzmake"
+C-b = ":pipe hx-bold.sh"
 
 [keys.normal." ".";"]
 # open URLs, file paths, etc.
