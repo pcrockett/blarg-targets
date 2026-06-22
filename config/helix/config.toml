@@ -41,6 +41,10 @@ C-b = ":pipe hx-bold.sh"
 o = ":pipe-to xargs bgopen"
 r = ":reflow"
 
+[keys.normal." ".";".w]
+e = ":set soft-wrap.enable true"
+d = ":set soft-wrap.enable false"
+
 # create a new minor mode bound to `<space>;`
 # d for "docker"
 [keys.normal." ".";".d]
