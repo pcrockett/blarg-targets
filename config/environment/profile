@@ -17,6 +17,6 @@ export RUSH_ROOT="${HOME}/.local/share/rush"
 export SQUIRREL_DEST="${HOME}/.local/share/squirrel"
 export VISUAL="/usr/bin/helix"
 
-export PATH="${HOME}/.local/bin:${ASDF_DATA_DIR}/shims:${HOME}/.cargo/bin:${PNPM_HOME}:${GOBIN}:${PATH}"
+export PATH="${HOME}/.local/bin:${HOME}/.cargo/bin:${PNPM_HOME}:${GOBIN}:${PATH}"
 
 test -f "${HOME}/.profile-override" && . "${HOME}/.profile-override"
