@@ -8,16 +8,16 @@ apt_get:is_installed() {
 # boundary via `env` rather than as a prefix assignment on `as_root`. Without it,
 # apt falls back through its dialog/readline/teletype frontends and warns on any
 # machine without a controlling tty.
-apt_get:__run() {
+apt_get:run() {
   as_root env DEBIAN_FRONTEND=noninteractive apt-get "$@"
 }
 
 apt_get:install() {
-  apt_get:__run install --yes "$@"
+  apt_get:run install --yes "$@"
 }
 
 apt_get:remove() {
-  apt_get:__run remove --yes "$@"
+  apt_get:run remove --yes "$@"
 }
 
 # `dpkg --status` exits 0 for a package that has been removed but not purged --
