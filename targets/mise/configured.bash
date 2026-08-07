@@ -8,6 +8,7 @@ satisfied_if() {
 }
 
 apply() {
+  mkdir --parent "$(dirname "${SYSTEM_PATH}")"
   rm -rf "${SYSTEM_PATH}.new"
   cp -r "${REPO_PATH}" "${SYSTEM_PATH}.new"
   if [ -d "${SYSTEM_PATH}" ]; then
