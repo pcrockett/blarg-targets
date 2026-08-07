@@ -10,6 +10,7 @@ satisfied_if() {
 
 apply() {
   as_root extrepo enable mise
+  apt_get:run update
 }
 
 is_deb_source_enabled() {
