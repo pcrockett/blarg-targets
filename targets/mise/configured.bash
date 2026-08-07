@@ -4,7 +4,7 @@ REPO_PATH="${BLARG_MODULE_DIR}/config/mise"
 SYSTEM_PATH=~/.config/mise
 
 satisfied_if() {
-  checkpoint_is_current
+  checkpoint_is_current "${REPO_PATH}/config.toml"
 }
 
 apply() {
