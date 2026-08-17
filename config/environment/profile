@@ -1,6 +1,4 @@
 # shellcheck shell=sh
-export ASDF_CONFIG_FILE="${HOME}/.config/asdf/asdfrc"
-export ASDF_DATA_DIR="${HOME}/.local/state/asdf"
 export BKT_CACHE_DIR="${HOME}/.cache/bkt"
 export DENO_INSTALL="${HOME}/.local/share/deno"
 export DIFFPROG="/usr/bin/delta"
@@ -15,7 +13,7 @@ export PNPM_HOME="${HOME}/.local/share/pnpm"
 export RUSH_CONFIG="${HOME}/.config/rush/config"
 export RUSH_ROOT="${HOME}/.local/share/rush"
 export SQUIRREL_DEST="${HOME}/.local/share/squirrel"
-export VISUAL="/usr/bin/helix"
+export VISUAL="${EDITOR}"
 
 export PATH="${HOME}/.local/bin:${HOME}/.cargo/bin:${PNPM_HOME}:${GOBIN}:${PATH}"
 
