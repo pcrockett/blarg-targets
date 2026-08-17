@@ -1,4 +1,5 @@
 # yaml-language-server: $schema=https://json.schemastore.org/pre-commit-config.json
+
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: 3e8a8703264a2f4a69428a0aa4dcb512790b2c8c  # frozen: v6.0.0
@@ -11,38 +12,41 @@ repos:
       - id: check-yaml
       - id: end-of-file-fixer
       - id: trailing-whitespace
-  - repo: https://github.com/rhysd/actionlint
-    rev: 914e7df21a07ef503a81201c76d2b11c789d3fca  # frozen: v1.7.12
-    hooks:
-      - id: actionlint-system
-  - repo: https://github.com/adrienverge/yamllint
-    rev: cba56bcde1fdd01c1deb3f945e69764c291a6530  # frozen: v1.38.0
-    hooks:
-      - id: yamllint
+
+  # local tools assumed to be installed with mise, see mise.toml
   - repo: local
     hooks:
-      - name: shellcheck
-        id: shellcheck
+      - id: actionlint
+        name: lint github actions files
         language: system
+        entry: actionlint
+        types:
+          - yaml
+        files: ^\.github/workflows/
+      - id: shellcheck
+        name: lint shell scripts
         entry: shellcheck
         args: [--shell, bash]
-        types: [shell]
-      - name: shfmt
-        id: shfmt
         language: system
+        types_or:
+          - shell
+          - bash
+      - id: shfmt
+        name: autoformat shell scripts
         entry: shfmt
-        args: ["--write"]
-        types: [shell]
-        exclude_types: [csh, tcsh, zsh]
-        exclude: rustup-init
-      - name: tagref
-        id: tagref
+        args:
+          - --write
         language: system
-        entry: tagref
-        args: [check]
-        pass_filenames: false
+        types:
+          - shell
+      - id: yamllint
+        name: lint yaml files
+        entry: yamllint
+        language: system
+        types:
+          - yaml
       - id: yamlfmt
-        name: yamlfmt
+        name: autoformat yaml files
         entry: yamlfmt
         language: system
         types:
