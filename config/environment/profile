@@ -1,4 +1,13 @@
 # shellcheck shell=sh
+
+# ensure HOME is set correctly even when running:
+#
+#    env --ignore-environment -- sh -c '. ~/.profile; export -p;'
+#
+if [ "${HOME:-}" = "" ]; then
+  export HOME=~
+fi
+
 export BKT_CACHE_DIR="${HOME}/.cache/bkt"
 export DENO_INSTALL="${HOME}/.local/share/deno"
 export DIFFPROG="/usr/bin/delta"
