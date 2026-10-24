@@ -1,6 +1,7 @@
 *.sublime-workspace
 .blarg/
 .direnv/
+.mise/locks/
 .mypy_cache/
 .pytest_cache/
 .ruff_cache/
