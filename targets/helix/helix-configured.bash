@@ -4,7 +4,8 @@ LOCAL_CONFIG="${BLARG_MODULE_DIR}/config/helix"
 HELIX_CONFIG="${XDG_CONFIG_HOME}/helix"
 
 satisfied_if() {
-  files_are_same "${LOCAL_CONFIG}/config.toml" "${HELIX_CONFIG}/config.toml"
+  files_are_same "${LOCAL_CONFIG}/config.toml" "${HELIX_CONFIG}/config.toml" \
+    && files_are_same "${LOCAL_CONFIG}/languages.toml" "${HELIX_CONFIG}/languages.toml"
 }
 
 apply() {

@@ -82,3 +82,13 @@ formatter = { command = "roc", args =[ "format", "--stdin", "--stdout"]}
 [[grammar]]
 name = "roc"
 source = { git = "https://github.com/faldor20/tree-sitter-roc.git", rev = "94634c7e882d3c55066aa074cab4911284326deb" }
+
+[language-server.dprint]
+command = "dprint"
+args = ["lsp"]
+# config = { useGlobalConfig = true }
+
+[[language]]
+name = "markdown"
+language-servers = ["dprint"]
+auto-format = true
